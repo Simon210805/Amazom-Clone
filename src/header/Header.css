@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.img img {
+  width: 110px;
+  height: 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  background-color: #232f3e;
+  color: aliceblue;
+  
+}
+.search {
+  size: 25px;
+}
+.icon {
+  background-color: #f3a847;
+  padding: 10px;
+  border: none;
+}
+.location1 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: -19px;
+  }
+
+.select {
+  width: 100%;
+  display: flex;
+}
+.select select {
+  background-color: rgb(243, 242, 242);
+}
+.select select,
+.select input {
+  padding: 10px;
+}
+.select input {
+  width: 100%;
+}
+
+
+.flagAndSelect {
+  display: none;
+}
+.menu {
+  display: flex;
+  gap: 10px;
+  /* width: 100%; */
+  align-items: center;
+  justify-content: center;
+  background-color: #232f3e;
+  padding: 0;
+  margin: 0;
+  color: aliceblue;
+}
+.return div{
+      height: 25px;
+  }
+  .menu a {
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .menu-item {
+      background-color: #232f3e;
+      color: aliceblue;
+      border: none;
+  }
+
+  .menu-item:hover {
+    border: white 1px solid;
+  }
+/*   
+.sign select {
+  background-color: #232f3e;
+  color: aliceblue;
+  font-size: large;
+  height: 20px;
+  padding-top: -40px;
+  border: none;
+}
+.sign p {
+  font-size: 22px;
+  margin-left: 5px;
+}
+.sign div a {
+  display: flex;
+  color: aliceblue;
+  text-decoration: none;
+} */
+.dropdown {
+  position: relative;
+  display: block;
+  background-color: #232f3e;
+  padding: 10px;
+}
+.dropdown-toggle {
+  display: flex;
+  height: 20px;
+  width: 30px;
+  padding-left: 7px;
+  gap: 15px;
+  color: aliceblue;
+  background-color: #232f3e;
+}
+.dropdown-menu {
+  color: white;
+}
+.cart {
+    font-size: 40px;
+    margin-right: 10px;
+    position: relative;
+}
+.cart span {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 20px;
+  color: #f3a847;
+
+}
+
+.hover:hover {
+    border: white 1px solid;
+}
+@media (min-width: 890px) {
+  .navDivs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232f3e;
+    color: aliceblue;
+    font-weight: bold;
+  }
+  .logo {
+    width: 500px;
+    margin-left: -10px;
+  }
+  .select input {
+    width: 90%;
+  }
+  .img img {
+    width: 80px;
+    height: 50px;
+  }
+  .location {
+    margin-right: 5px;
+  }
+  .location p {
+    font-size: 16px;
+    margin-left: 20px;
+  }
+  .location1 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .flagAndSelect {
+    display: flex;
+    gap: 5px;
+
+    margin: 10px 10px 0;
+  }
+  .flagAndSelect a img {
+    width: 35px;
+    height: 30px;
+  }
+  .flagAndSelect select {
+    width: 45px;
+    height: 30px;
+  }
+/* 
+  .sign p {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .sign {
+    background-color: #232f3e;
+  }
+  .sign select {
+    background-color: #232f3e;
+    color: aliceblue;
+    font-size: large;
+    height: 20px;
+    border: none;
+  }
+  .sign div a {
+    display: flex;
+    color: aliceblue;
+    text-decoration: none;
+  } */
+  /* .dropdown-toggle {
+    display: none;
+  } */
+
+  .dropdown-menu {
+    display: flex;
+    gap: 20px;
+    color: red;
+  }
+  .dropdown-menu li {
+    list-style: none;
+  }
+  .menu {
+    display: flex;
+    height: 70px;
+    color: aliceblue;
+  }
+  
+  .menu-divider {
+    padding: 10px;
+  }
+  .menu-item {
+   display: flex;
+  height: 30px;
+  /* margin-right: 40px; */
+  }
+  
+}
+
