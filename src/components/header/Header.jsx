@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import logo from "../img/download (2).png";
-import "./Header.css";
+import logo from "../../img/download (2).png";
+import classes from "./Header.module.css";
 import { CiLocationOn } from "react-icons/ci";
 import { BsSearch } from "react-icons/bs";
 import { RiShoppingCartLine } from "react-icons/ri";
@@ -23,17 +23,17 @@ function Header() {
       // You can add further logic here to handle item clicks
     };
   return (
-    <div className="header">
-      <div className="navDivs">
-        <div className="logo">
-          <div className="img hover">
+    <div className={classes.header}>
+      <div className={classes.navDivs}>
+        <div className={classes.logo}>
+          <div className={classes.img + " " + classes.hover}>
             <a href="#">
               <img src={logo} />
             </a>
           </div>
-          <div className="location hover">
+          <div className={classes.location + " " + classes.hover}>
             <p>Deliver to</p>
-            <div className="location1">
+            <div className={classes.location1}>
               <div>
                 <CiLocationOn />
               </div>
@@ -41,16 +41,16 @@ function Header() {
             </div>
           </div>
         </div>
-        <div className="select">
-          <select name="" id="" className="select1">
+        <div className={classes.select}>
+          <select name="" id="" className={classes.select1}>
             <option value="">All</option>
           </select>
           <input type="text" />
-          <button className="icon">
-            <BsSearch className="search" />
+          <button className={classes.icon}>
+            <BsSearch className={classes.search} />
           </button>
         </div>
-        <div className="flagAndSelect hover">
+        <div className={classes.flagAndSelect + " " + classes.hover}>
           <a href="#">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg/510px-Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg.png"
@@ -80,30 +80,30 @@ function Header() {
           </div>
         </div> */}
 
-        <div className="menu">
-          <div className="hover">
+        <div className={classes.menu}>
+          <div className={classes.hover}>
             <div>
-              <a href="#" className="menu-item">
+              <a href="#" className={classes.menuItem}>
                 Sign In
               </a>
             </div>
-            <div className="menu-item">
-              <select className="menu-item">
+            <div className={classes.menuItem}>
+              <select className={classes.menuItem}>
                 <option>Account & Lists</option>
                 <option>Option 1</option>
                 <option>Option 2</option>
               </select>
             </div>
           </div>
-          <div className="return hover">
+          <div className={classes.return + " " + classes.hover}>
             <div>
-              <p className="menu-item">Returns</p>
+              <p className={classes.menuItem}>Returns</p>
             </div>
             <div>
-              <p className="menu-item">&Orders</p>
+              <p className={classes.menuItem}>&Orders</p>
             </div>
           </div>
-          <div className="cart hover">
+          <div className={classes.cart + " " + classes.hover}>
             <span>0</span>
             <RiShoppingCartLine />
           </div>
@@ -125,14 +125,14 @@ function Header() {
         )}
       </div> */}
 
-      <div className="dropdown">
-        <button className="dropdown-toggle" onClick={toggleMenu}>
+      <div className={classes.dropdown}>
+        <button className={classes.dropdownToggle} onClick={toggleMenu}>
           <div>
             <CiMenuBurger />
           </div>
           <p>all</p>
         </button>
-        <ul className={isOpen ? "dropdown-menu show" : "dropdown-menu"}>
+        <ul className={isOpen ?  "dropdown-menu show" : "dropdown-menu"}>
           <li onClick={() => handleItemClick("Item 1")}>Item 1</li>
           <li onClick={() => handleItemClick("Item 2")}>Item 2</li>
           <li onClick={() => handleItemClick("Item 3")}>Item 3</li>

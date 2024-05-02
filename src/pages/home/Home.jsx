@@ -1,10 +1,11 @@
 import React from 'react'
-import Header from '../../header/Header'
-
+import Header from '../../components/header/Header'
+import CarouselEffect from '../../components/carausel/Carousel'
 function Home() {
   return (
       <div>
-          <Header />
+      <Header />
+      <CarouselEffect />
     </div>
   )
 }

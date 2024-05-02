@@ -6,7 +6,9 @@
   width: 110px;
   height: 50px;
 }
-
+.dropdown {
+  background-color: #1B1A1D;
+}
 .logo {
   display: flex;
   align-items: center;
@@ -70,13 +72,13 @@
     text-decoration: none;
     color: aliceblue;
   }
-  .menu-item {
+  .menuItem{
       background-color: #232f3e;
       color: aliceblue;
       border: none;
   }
 
-  .menu-item:hover {
+  .menuItem:hover {
     border: white 1px solid;
   }
 /*   
@@ -103,7 +105,7 @@
   background-color: #232f3e;
   padding: 10px;
 }
-.dropdown-toggle {
+.dropdownToggle{
   display: flex;
   height: 20px;
   width: 30px;
@@ -219,9 +221,10 @@
   .menu-divider {
     padding: 10px;
   }
-  .menu-item {
+  .menuItem{
    display: flex;
   height: 30px;
+  color: aliceblue;
   /* margin-right: 40px; */
   }
   
