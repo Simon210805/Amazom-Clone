@@ -6,6 +6,8 @@ import { CiLocationOn } from "react-icons/ci";
 import { BsSearch } from "react-icons/bs";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { CiMenuBurger } from "react-icons/ci";
+import LowerHeader from "./LowerHeader";
+import { Link } from "react-router-dom";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
@@ -23,13 +25,14 @@ function Header() {
       // You can add further logic here to handle item clicks
     };
   return (
-    <div className={classes.header}>
+    <>
+    <section className={classes.header}>
       <div className={classes.navDivs}>
         <div className={classes.logo}>
           <div className={classes.img + " " + classes.hover}>
-            <a href="#">
+            <Link to="/">
               <img src={logo} />
-            </a>
+            </Link>
           </div>
           <div className={classes.location + " " + classes.hover}>
             <p>Deliver to</p>
@@ -51,12 +54,12 @@ function Header() {
           </button>
         </div>
         <div className={classes.flagAndSelect + " " + classes.hover}>
-          <a href="#">
+          <Link to="#">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg/510px-Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg.png"
               alt="us flag img"
             />
-          </a>
+          </Link>
           <select name="" id="">
             <option value="">EN</option>
           </select>
@@ -81,7 +84,7 @@ function Header() {
         </div> */}
 
         <div className={classes.menu}>
-          <div className={classes.hover}>
+          <Link to="#" className={classes.hover}>
             <div>
               <a href="#" className={classes.menuItem}>
                 Sign In
@@ -90,23 +93,21 @@ function Header() {
             <div className={classes.menuItem}>
               <select className={classes.menuItem}>
                 <option>Account & Lists</option>
-                <option>Option 1</option>
-                <option>Option 2</option>
               </select>
             </div>
-          </div>
-          <div className={classes.return + " " + classes.hover}>
+          </Link>
+          <Link to="/orders" className={classes.return + " " + classes.hover}>
             <div>
               <p className={classes.menuItem}>Returns</p>
             </div>
             <div>
               <p className={classes.menuItem}>&Orders</p>
             </div>
-          </div>
-          <div className={classes.cart + " " + classes.hover}>
+          </Link>
+          <Link to="/cart" className={classes.cart + " " + classes.hover}>
             <span>0</span>
             <RiShoppingCartLine />
-          </div>
+          </Link>
         </div>
       </div>
       {/* <div className="dropdown">
@@ -138,7 +139,9 @@ function Header() {
           <li onClick={() => handleItemClick("Item 3")}>Item 3</li>
         </ul>
       </div>
-    </div>
+      </section>
+      <LowerHeader />
+    </>
   );
 }
 

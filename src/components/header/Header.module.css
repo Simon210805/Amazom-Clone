@@ -134,6 +134,31 @@
 .hover:hover {
     border: white 1px solid;
 }
+
+
+
+/* i will use this letter */
+.lowerHeader {
+  background-color: #232f3e;
+  color: white;
+}
+.lowerHeader ul {
+  display: flex;
+  list-style: none;
+  gap: 5px;
+}
+.lowerHeader ul li {
+  padding: 10px;
+}
+.lowerHeader .menuIcon {
+  padding-bottom: 18px;
+}
+.lowerHeader ul li:first-child {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}  
+
 @media (min-width: 890px) {
   .navDivs {
     display: flex;
@@ -227,6 +252,13 @@
   color: aliceblue;
   /* margin-right: 40px; */
   }
-  
+
+
+
+
+  /* i will use it later */
+  .lowerHeader ul li:not(:first-child) {
+    display: none;
+  }
 }
 
