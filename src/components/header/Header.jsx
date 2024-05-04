@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import logo from "../../img/download (2).png";
 import classes from "./Header.module.css";
@@ -8,24 +8,11 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import { CiMenuBurger } from "react-icons/ci";
 import LowerHeader from "./LowerHeader";
 import { Link } from "react-router-dom";
+import { DataContext } from "../dataProvider/DataProvider";
 function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-//   const handleItemClick = (item) => {
-//     console.log(`Selected item: ${item}`);
-//     // You can perform any action based on the selected item here
-//     // For example, update state, call functions, etc.
-//     setIsOpen(false); // Close the dropdown after selecting an item
-//     };
-    const handleItemClick = (item) => {
-      console.log("Clicked:", item);
-      // You can add further logic here to handle item clicks
-    };
+ const [{basket}, dispatch] = useContext(DataContext);
   return (
-    <>
+    <section className={classes.fixed}>
     <section className={classes.header}>
       <div className={classes.navDivs}>
         <div className={classes.logo}>
@@ -105,7 +92,7 @@ function Header() {
             </div>
           </Link>
           <Link to="/cart" className={classes.cart + " " + classes.hover}>
-            <span>0</span>
+            <span>{basket.length}</span>
             <RiShoppingCartLine />
           </Link>
         </div>
@@ -126,7 +113,7 @@ function Header() {
         )}
       </div> */}
 
-      <div className={classes.dropdown}>
+      {/* <div className={classes.dropdown}>
         <button className={classes.dropdownToggle} onClick={toggleMenu}>
           <div>
             <CiMenuBurger />
@@ -138,10 +125,10 @@ function Header() {
           <li onClick={() => handleItemClick("Item 2")}>Item 2</li>
           <li onClick={() => handleItemClick("Item 3")}>Item 3</li>
         </ul>
-      </div>
+      </div> */}
       </section>
       <LowerHeader />
-    </>
+    </section>
   );
 }
 
