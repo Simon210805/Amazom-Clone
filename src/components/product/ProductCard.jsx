@@ -6,7 +6,7 @@ import classes from "./Product.module.css";
 import { DataContext } from "../dataProvider/DataProvider";
 import { type } from "../../utility/Action.type";
 
-function ProductCard({ Product, flex, renderdesc }) {
+function ProductCard({ Product, flex, renderdesc,renderAddToCart }) {
   // Check if Product is defined
   if (!Product) {
     return null; // Or render a loading indicator or an error message
@@ -63,7 +63,9 @@ function ProductCard({ Product, flex, renderdesc }) {
         <CurrencyFormat amount={price} />
       </div>
       {/* button */}
-      <button className={classes.button} onClick={addToCart}>add to cart</button>
+      {
+        renderAddToCart && <button className={classes.button} onClick={addToCart}>add to cart</button>
+      }
     </div>
   );
 }

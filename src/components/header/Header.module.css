@@ -128,7 +128,7 @@
     position: relative;
 }
 .cart span {
-  position: absolute;
+  position: absolute;  
   right: 10px;
   font-size: 20px;
   color: #f3a847;
@@ -161,6 +161,7 @@
   display: flex;
   align-items: center;
   gap: 2px;
+  
 }  
 
 @media (min-width: 890px) {

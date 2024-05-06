@@ -26,6 +26,7 @@ function ProductDetail() {
           {isloading ? (<Loader />) : (<ProductCard Product={product}
               flex={true}
               renderdesc={true}
+              renderAddToCart={true}
           />)}
     </LayOut>
   );
