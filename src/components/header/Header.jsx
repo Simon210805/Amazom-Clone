@@ -10,7 +10,10 @@ import LowerHeader from "./LowerHeader";
 import { Link } from "react-router-dom";
 import { DataContext } from "../dataProvider/DataProvider";
 function Header() {
- const [{basket}, dispatch] = useContext(DataContext);
+  const [{ basket }, dispatch] = useContext(DataContext);
+  const totalItems = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
   return (
     <section className={classes.fixed}>
     <section className={classes.header}>
@@ -51,24 +54,6 @@ function Header() {
             <option value="">EN</option>
           </select>
         </div>
-        {/* <div className="sign">
-          <div>
-            <p>sign in</p>
-            <select name="" id="" className="select2">
-              <option value="" className="option">Account & Lists</option>
-            </select>
-          </div>
-          <div>
-            <p>returns</p>
-            <a href="#" className="select2">
-              <p>&</p> <p>Orders</p>
-            </a>
-          </div>
-                  <div className="cart">
-                      <span>0</span>
-            <RiShoppingCartLine />
-          </div>
-        </div> */}
 
         <div className={classes.menu}>
           <Link to="#" className={classes.hover}>
@@ -92,40 +77,11 @@ function Header() {
             </div>
           </Link>
           <Link to="/cart" className={classes.cart + " " + classes.hover}>
-            <span>{basket.length}</span>
+            <span>{totalItems}</span>
             <RiShoppingCartLine />
           </Link>
         </div>
       </div>
-      {/* <div className="dropdown">
-        <button className="dropdown-toggle" onClick={toggleMenu}>
-          <div>
-            <CiMenuBurger />
-          </div>
-          <p>all</p>
-        </button>
-        {isOpen && (
-          <ul className="dropdown-menu">
-            <li onClick={() => handleItemClick("Item 1")}>Item 1</li>
-            <li onClick={() => handleItemClick("Item 2")}>Item 2</li>
-            <li onClick={() => handleItemClick("Item 3")}>Item 3</li>
-          </ul>
-        )}
-      </div> */}
-
-      {/* <div className={classes.dropdown}>
-        <button className={classes.dropdownToggle} onClick={toggleMenu}>
-          <div>
-            <CiMenuBurger />
-          </div>
-          <p>all</p>
-        </button>
-        <ul className={isOpen ?  "dropdown-menu show" : "dropdown-menu"}>
-          <li onClick={() => handleItemClick("Item 1")}>Item 1</li>
-          <li onClick={() => handleItemClick("Item 2")}>Item 2</li>
-          <li onClick={() => handleItemClick("Item 3")}>Item 3</li>
-        </ul>
-      </div> */}
       </section>
       <LowerHeader />
     </section>
