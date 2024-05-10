@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { useState } from "react";
-import logo from "../../img/download (2).png";
 import classes from "./Header.module.css";
 import { CiLocationOn } from "react-icons/ci";
 import { BsSearch } from "react-icons/bs";
@@ -22,7 +21,10 @@ function Header() {
           <div className={classes.logo}>
             <div className={classes.img + " " + classes.hover}>
               <Link to="/">
-                <img src={logo} />
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkSxSADHlE5N80qd2y8wc9wzbH8-sMuLUrTpDY-uzWltlKpg_7gWCiQ18cJ4pV05_64KU&usqp=CAU"
+                  alt="logo"
+                />
               </Link>
             </div>
             <div className={classes.location + " " + classes.hover}>
@@ -39,7 +41,7 @@ function Header() {
             <select name="" id="" className={classes.select1}>
               <option value="">All</option>
             </select>
-            <input type="text" />
+            <input type="text" placeholder="Search Amazon" />
             <button className={classes.icon}>
               <BsSearch className={classes.search} />
             </button>
@@ -59,7 +61,7 @@ function Header() {
           <div className={classes.menu}>
             <Link to="#" className={classes.hover}>
               <div>
-                <Link to={!user && "/auth"} className={classes.menuItem}>
+                <Link to={!user && "/auth"}>
                   <div className={classes.userSignIn}>
                     <div>
                       {user ? (
@@ -69,8 +71,8 @@ function Header() {
                         </>
                       ) : (
                         <>
-                        <p>Hello, Sign in</p>
-                        <span>Account & Lists</span>
+                          <p>Hello, Sign in</p>
+                          <span>Account & Lists</span>
                         </>
                       )}
                     </div>
@@ -84,16 +86,17 @@ function Header() {
               </div> */}
             </Link>
             <Link to="/orders" className={classes.return + " " + classes.hover}>
-              <div>
-                <p className={classes.menuItem}>Returns</p>
-              </div>
-              <div>
-                <p className={classes.menuItem}>&Orders</p>
+              <div className={classes.returnDiv}>
+                <p className={classes.p}>Returns</p>
+                <p>&Orders</p>
               </div>
             </Link>
             <Link to="/cart" className={classes.cart + " " + classes.hover}>
               <span>{totalItems}</span>
-              <RiShoppingCartLine />
+              <div className={classes.cartDiv}>
+                <RiShoppingCartLine />
+                <p>Cart</p>
+              </div>
             </Link>
           </div>
         </div>
