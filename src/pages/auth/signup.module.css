@@ -56,3 +56,30 @@
     background-color: #f0c14b;
     border: none;
 }
+.login_signin_btn {
+    border: none;
+    background-color: #f0c14b;
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.login_signin_btn:hover {
+    background-color: var(--primary-shade);
+}
+.login_container p {
+    font-size: 12px;
+    margin-top: 10px;
+}
+.login_create_btn {
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.login_create_btn:hover {
+    background-color: lightgray;
+}

@@ -1,12 +1,12 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from './pages/home/Home'
-import Auth from './pages/auth/Auth'
-import Payment from './pages/payment/Payment'
-import Orders from './pages/orders/Orders'
-import Cart from './pages/cart/Cart'
-import Results from './pages/results/Results'
-import ProductDetail from './pages/productDetail/ProductDetail'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/home/Home";
+import Auth from "./pages/auth/Auth";
+import Payment from "./pages/payment/Payment";
+import Orders from "./pages/orders/Orders";
+import Cart from "./pages/cart/Cart";
+import Results from "./pages/results/Results";
+import ProductDetail from "./pages/productDetail/ProductDetail";
 
 function Routing() {
   return (

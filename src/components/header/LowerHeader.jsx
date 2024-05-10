@@ -14,6 +14,7 @@ function LowerHeader() {
       <div className={classes.lowerHeader}>
         <div className={classes.menuIcon} onClick={toggleMenu}>
           <CiMenuBurger />
+          <p>All</p>
         </div>
         <div className={classes.dropdown1}>
         <ul
