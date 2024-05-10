@@ -68,6 +68,10 @@ outline:none;
 .flagAndSelect {
   display: none;
 }
+ .userSignIn {
+ /* margin-right: 40px; */
+  width: 130px;
+}
 .menu {
   display: flex;
   gap: 10px;
@@ -101,12 +105,11 @@ outline:none;
     font-size: 30px;
     margin-right: 10px;
     position: relative;
-    padding: 11px 12px 0;
 }
 .cart span {
   position: absolute;  
   right: 40px;
-  top: -7px;
+  top: -8px;
   font-size: 20px;
   color: #f3a847;
 
@@ -118,7 +121,9 @@ outline:none;
 font-size: 11px !important;
 margin-top: 20px;
 }
-
+.hover {
+  padding: 7px 12px;
+}
 .hover:hover {
     border: white 1px solid;
 }
@@ -128,6 +133,9 @@ margin-top: 20px;
   color: white;
   height: 30px;
 
+}
+.CiMenuBurger {
+  margin: 5px;
 }
 .lowerHeader ul {
   list-style: none;
@@ -189,7 +197,7 @@ margin-top: 20px;
     width: 90%;
   }
  .img img {
-  width: 120px;
+  width: 100px;
   height: 50px;
 }
   .location {
@@ -210,16 +218,20 @@ margin-top: 20px;
   .flagAndSelect {
     display: flex;
     gap: 5px;
-
     margin: 10px 10px 0;
   }
   .flagAndSelect a img {
-    width: 35px;
-    height: 30px;
+    width: 25px;
+    height: 20px;
   }
   .flagAndSelect select {
-    width: 45px;
-    height: 30px;
+    width: 30px;
+    height: 20px;
+    font-size: xx-small;
+    margin-top: 3px;
+  }
+  .flagAndSelect select option {
+    font-size: 16px;
   }
 
   .menu {
@@ -240,11 +252,9 @@ margin-top: 20px;
       font-size: 12px;
     }
 
-  .userSignIn {
-  width: 150px;
-}
-.userSignIn:hover {
-  border: white 1px solid;
+ 
+.userSignIn .p1 {
+  font-size: 12px;
 }
   .menuIcon p {
     display: block;

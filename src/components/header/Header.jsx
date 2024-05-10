@@ -66,12 +66,12 @@ function Header() {
                     <div>
                       {user ? (
                         <>
-                          <p>Hello {user?.email.split("@")[0]}</p>
+                          <p className={classes.p1}>Hello {user?.email.split("@")[0]}</p>
                           <span onClick={() => auth.signOut()}>Sign Out</span>
                         </>
                       ) : (
                         <>
-                          <p>Hello, Sign in</p>
+                          <p className={classes.p1}>Hello, Sign in</p>
                           <span>Account & Lists</span>
                         </>
                       )}
