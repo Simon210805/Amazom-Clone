@@ -69,7 +69,6 @@ outline:none;
   display: none;
 }
  .userSignIn {
- /* margin-right: 40px; */
   width: 130px;
 }
 .menu {
@@ -123,6 +122,9 @@ margin-top: 20px;
 }
 .hover {
   padding: 7px 12px;
+}
+.img1:hover {
+  border: white 1px solid;
 }
 .hover:hover {
     border: white 1px solid;

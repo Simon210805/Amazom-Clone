@@ -1,5 +1,5 @@
-import React from 'react'
-import classes from "./Category.module.css"
+import React from 'react';
+import classes from "./Category.module.css";
 import { Link } from 'react-router-dom';
 function CategoryCard({ data }) {
   return (

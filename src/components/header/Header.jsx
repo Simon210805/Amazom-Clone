@@ -19,7 +19,7 @@ function Header() {
       <section className={classes.header}>
         <div className={classes.navDivs}>
           <div className={classes.logo}>
-            <div className={classes.img + " " + classes.hover}>
+            <div className={classes.img + " " + classes.img1}>
               <Link to="/">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkSxSADHlE5N80qd2y8wc9wzbH8-sMuLUrTpDY-uzWltlKpg_7gWCiQ18cJ4pV05_64KU&usqp=CAU"

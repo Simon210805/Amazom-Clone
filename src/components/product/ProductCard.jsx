@@ -4,7 +4,7 @@ import CurrencyFormat from "../currencyFormat/CurrencyFormat";
 import { Link } from "react-router-dom";
 import classes from "./Product.module.css";
 import { DataContext } from "../dataProvider/DataProvider";
-import { type } from "../../utility/Action.type";
+// import { type } from "../../utility/Action.type";
 
 function ProductCard({ Product, flex, renderdesc,renderAddToCart }) {
   // Check if Product is defined
