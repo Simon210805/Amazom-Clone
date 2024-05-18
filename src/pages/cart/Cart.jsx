@@ -36,7 +36,7 @@ function Cart() {
           <h3>your shopping basket</h3>
           <hr />
           {basket?.length === 0 ? ( // Use strict equality operator
-            <p>Your basket is empty</p>
+            <p>Your basket is empty is it</p>
           ) : (
             basket?.map((item, index) => {
               return (
