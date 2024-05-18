@@ -18,6 +18,7 @@ function Auth() {
   const [{ user }, dispatch] = useContext(DataContext);
   const navigate = useNavigate();
   const navStateData = useLocation();
+  console.log(navStateData)
   console.log(user);
 
   const authHandler = (e) => {
@@ -46,7 +47,7 @@ function Auth() {
           console.log(userInfo);
           dispatch({ type: type.SET_USER, user: userInfo.user });
           setLoading({ ...loading, signUp: false });
-          navigate("/");
+          navigate(navStateData?.state?.redirect || "/");
         })
         .catch((err) => {
           console.log(err);

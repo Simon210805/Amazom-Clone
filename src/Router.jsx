@@ -11,9 +11,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
 
-const stripePromise = loadStripe(
-  "pk_test_51PF1nZLRmHvTZfkkGtwqoYNEsYNvZBaBJ2vp415BsFv2sWu7M7gLepGVn0NDJJ453enFL7Uk3slALEbMylWB6moJ00CiqyQtT8"
-);
+const stripePromise = loadStripe(import.meta.env.PK_KEY);
 
 function Routing() {
   return (
@@ -25,7 +23,7 @@ function Routing() {
           <Route
             path="/payment"
             element={
-              <ProtectedRoute msg="Please login first" redirect="/payment">
+              <ProtectedRoute msg={"Please login first"} redirect={"/payment"}>
                 <Elements stripe={stripePromise}>
                   <Payment />
                 </Elements>
