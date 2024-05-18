@@ -24,7 +24,7 @@ function Payment() {
     return item.price * item.amount + amount; // Multiply item price by its quantity
   }, 0);
   const [cardError, setCardError] = useState(null);
-  const [proccessing, setProcessing] = useState(false);
+  const [Processing, setProcessing] = useState(false);
    const stripe = useStripe();
   const elements = useElements();
   const navigate = useNavigate();
@@ -90,10 +90,7 @@ function Payment() {
           <h3>Review items and delivery</h3>
           <div>
             {basket?.map((item) => (
-              <ProductCard
-                Product={item}
-                flex={true}
-              />
+              <ProductCard Product={item} flex={true} />
             ))}
           </div>
         </div>
@@ -111,19 +108,19 @@ function Payment() {
                 {/* price */}
                 <div className={classes.payment_price}>
                   <span>
-                Total Order | <CurrencyFormat amount={total} />
+                    Total Order | <CurrencyFormat amount={total} />
                   </span>
                   <br />
                   <button type="submit">
-                    {
-                      proccessing ? (
-                        <div className={classes.loading}>
-                          <ClipLoader color="gray" size={15} />
-                          <p>please wait</p>
-                        </div>
-                      ): "pay now"
-                    }
-                </button>
+                    {Processing ? (
+                      <div className={classes.loading}>
+                        <ClipLoader color="gray" size={15} />
+                        <p>please wait</p>
+                      </div>
+                    ) : (
+                      "pay now"
+                    )}
+                  </button>
                 </div>
               </form>
             </div>

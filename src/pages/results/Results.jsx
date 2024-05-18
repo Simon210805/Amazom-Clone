@@ -7,7 +7,7 @@ import classes from "./Results.module.css";
 import ProductCard from "../../components/product/ProductCard";
 function Results() {
     const [results, setResults] = useState([]);
-    const [isloading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
   const { categoryName } = useParams();
   useEffect(() => {
     axios
@@ -28,7 +28,7 @@ function Results() {
         <h1 style={{ padding: "30px" }}>results</h1>
               <p style={{ padding: "30px" }}>category / {categoryName}</p>
               <hr />
-              { isloading ? (<div>Loader</div>) : (
+              { isLoading ? (<div>Loader</div>) : (
                   
         <div className={classes.product_container}>
           {results?.map((Product) => (

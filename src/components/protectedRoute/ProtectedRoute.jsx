@@ -11,9 +11,7 @@ function ProtectedRoute({ children, msg, redirect }) {
             navigate('/auth',{state:{msg,redirect}})
         }
     }, [user])
-  return (
-    <div>ProtectedRoute</div>
-  )
+    return children;
 }
 
 

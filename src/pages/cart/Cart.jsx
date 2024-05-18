@@ -20,13 +20,13 @@ function Cart() {
   const inCrement = (item) => {
     dispatch({
       type: type.ADD_TO_BASKET, item
-    });   
+    });
   }
 
   const deCrement = (id) => {
     dispatch({
       type: type.REMOVE_FROM_BASKET, id
-    }); 
+    });
   }
   return (
     <LayOut>
@@ -89,4 +89,3 @@ function Cart() {
 }
 
 export default Cart;
-
