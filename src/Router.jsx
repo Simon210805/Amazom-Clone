@@ -11,7 +11,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
 
-const stripePromise = loadStripe(import.meta.env.PK_KEY);
+const stripePromise = loadStripe(import.meta.env.VITE_PK_KEY);
 
 function Routing() {
   return (
