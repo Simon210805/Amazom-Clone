@@ -1,54 +1,60 @@
-import React, { useState, useContext } from 'react'
-import { type } from '../../utility/Action.type'
-import classes from ".//signup.module.css"
-import { Link, useNavigate } from 'react-router-dom'
-import { auth } from "../../utility/Firebase"
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth"
-import { DataContext } from '../../components/dataProvider/DataProvider'
-import { ClipLoader } from 'react-spinners'
+import React, { useState, useContext } from "react";
+import { type } from "../../utility/Action.type";
+import classes from ".//signup.module.css";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { auth } from "../../utility/Firebase";
+import {
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+} from "firebase/auth";
+import { DataContext } from "../../components/dataProvider/DataProvider";
+import { ClipLoader } from "react-spinners";
 function Auth() {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [error, setError] = useState("")
-const [loading, setLoading] = useState({signIN:false, signUp:false})
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState({ signIN: false, signUp: false });
 
   const [{ user }, dispatch] = useContext(DataContext);
-  const navigate = useNavigate()
-  console.log(user)
+  const navigate = useNavigate();
+  const navStateData = useLocation();
+  console.log(user);
 
   const authHandler = (e) => {
-    e.preventDefault()
-    if (e.target.name === "signin") {
+    e.preventDefault();
+    if (e.target.name === "signIn") {
       //firebase auth
-      setLoading({...loading, signIN:true})
-      signInWithEmailAndPassword(auth, email, password).then((userInfo)=>{
-        console.log(userInfo)
-        dispatch({ type: type.SET_USER, user: userInfo.user })
-        setLoading({ ...loading, signIN: false })
-        navigate("/")
-      }).catch((err)=>{
-        console.log(err)
-        setError(err.message)
-        setLoading({...loading, signIN:false})
-      })
-      
+      setLoading({ ...loading, signIN: true });
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userInfo) => {
+          console.log(userInfo);
+          dispatch({ type: type.SET_USER, user: userInfo.user });
+          setLoading({ ...loading, signIN: false });
+          navigate (navStateData?.state?.redirect || "/");
+        })
+        .catch((err) => {
+          console.log(err);
+          setError(err.message);
+          setLoading({ ...loading, signIN: false });
+        });
     } else {
       //firebase auth
-      
-      setLoading({...loading, signUp:true})
-      createUserWithEmailAndPassword(auth, email, password).then((userInfo) => {
-        console.log(userInfo)
-        dispatch({ type: type.SET_USER, user: userInfo.user });
-        setLoading({ ...loading, signUp: false })
-        navigate("/")
-      }).catch((err)=>{
-        console.log(err)
-        setError(err.message)
-        setLoading({...loading, signUp:false})
-      })
-    }
 
-  }
+      setLoading({ ...loading, signUp: true });
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userInfo) => {
+          console.log(userInfo);
+          dispatch({ type: type.SET_USER, user: userInfo.user });
+          setLoading({ ...loading, signUp: false });
+          navigate("/");
+        })
+        .catch((err) => {
+          console.log(err);
+          setError(err.message);
+          setLoading({ ...loading, signUp: false });
+        });
+    }
+  };
   return (
     <section className={classes.login}>
       {/* logo */}
@@ -61,6 +67,11 @@ const [loading, setLoading] = useState({signIN:false, signUp:false})
       {/* form */}
       <div className={classes.login_container}>
         <h1>Sign In</h1>
+        {navStateData?.state?.msg && (
+          <p style={{ color: "red", textAlign: "center",padding: "5px",fontWeight: "bold" }}>{navStateData?.state?.msg}</p>
+          
+        )
+        }
         <form action="">
           <div>
             <label htmlFor="email">Email</label>
@@ -83,7 +94,7 @@ const [loading, setLoading] = useState({signIN:false, signUp:false})
             />
           </div>
           <button
-            name="signin"
+            name="signIn"
             type="submit"
             onClick={authHandler}
             className={classes.login_signin_btn}
@@ -103,7 +114,7 @@ const [loading, setLoading] = useState({signIN:false, signUp:false})
         </p>
         {/* create account btn */}
         <button
-          name="signup"
+          name="signUp"
           type="submit"
           onClick={authHandler}
           className={classes.login_create_btn}
@@ -120,4 +131,4 @@ const [loading, setLoading] = useState({signIN:false, signUp:false})
   );
 }
 
-export default Auth
+export default Auth;
