@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Routing from './Router';
 import { DataContext } from './components/dataProvider/DataProvider';
 import { type } from './utility/Action.type';
-import {auth} from "./utility/Firebase"
+import { auth } from "./utility/Firebase"
 
 function App() {
   const [{user} , dispatch] = useContext(DataContext)
@@ -29,10 +29,9 @@ function App() {
  }, [])
   return (
     <>
-     <Routing />
-    
+      <Routing />
     </>
-  )
+  );
 }
 
 export default App
