@@ -33,3 +33,33 @@
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
 }
+
+@media screen and (max-width: 768px) {
+    .category{
+        width: 100%;
+    }
+    .category_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    .category{
+        width: 100%;
+    }
+    .category_container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+    
+}
+@media screen and (min-width: 769px) {
+    .category{
+        width: 100%;
+    }
+    .category_container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+}

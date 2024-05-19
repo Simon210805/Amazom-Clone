@@ -30,7 +30,17 @@ function Routing() {
               </ProtectedRoute>
             }
           />
-          <Route path="/orders" element={<Orders />} />
+          <Route
+            path="/orders"
+            element={
+              <ProtectedRoute
+                msg={"please login first to see your orders"}
+                redirect={"/orders"}
+              >
+                <Orders />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/category/:categoryName" element={<Results />} />
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
