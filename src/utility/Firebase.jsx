@@ -11,7 +11,7 @@ import "firebase/compat/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAzV3P5lvUXb5hqxWTcCQMVQkHX8qHQtxI",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "clone-ad54e.firebaseapp.com",
   projectId: "clone-ad54e",
   storageBucket: "clone-ad54e.appspot.com",
