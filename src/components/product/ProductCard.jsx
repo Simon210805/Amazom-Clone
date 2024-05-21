@@ -4,7 +4,7 @@ import CurrencyFormat from "../currencyFormat/CurrencyFormat";
 import { Link } from "react-router-dom";
 import classes from "./Product.module.css";
 import { DataContext } from "../dataProvider/DataProvider";
-// import { type } from "../../utility/Action.type";
+import { type } from "../../utility/Action.type";
 
 function ProductCard({ Product, flex, renderdesc,renderAddToCart }) {
   // Check if Product is defined
@@ -13,14 +13,16 @@ function ProductCard({ Product, flex, renderdesc,renderAddToCart }) {
   }
 
   // Destructure Product properties
-  const { title, price, rating, image, description } = Product;
+  const { title, price, rating, image, description, id } = Product;
 
   const [state, dispatch] = useContext(DataContext);
+  // console.log(state.basket)
   const addToCart = () => {
     dispatch({
-      type: "ADD_TO_BASKET",
+      type: type.ADD_TO_BASKET,
       item: {
         title,
+        id,
         price,
         rating,
         image,

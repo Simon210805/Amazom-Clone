@@ -79,11 +79,6 @@ function Header() {
                   </div>
                 </Link>
               </div>
-              {/* <div className={classes.menuItem}>
-                <select className={classes.menuItem}>
-                  <option>Account & Lists</option>
-                </select>
-              </div> */}
             </Link>
             <Link to="/orders" className={classes.return + " " + classes.hover}>
               <div className={classes.returnDiv}>

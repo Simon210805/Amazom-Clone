@@ -36,7 +36,8 @@
 
 @media screen and (max-width: 620px) {
     .category{
-        width: 100%;
+        width: 80%;
+
     }
     .category_container {
         grid-template-columns: repeat(1, 1fr);
@@ -46,7 +47,7 @@
 }
 @media screen and (min-width: 621px) {
     .category{
-        width: 100%;
+        width: 90%;
     }
     .category_container {
         grid-template-columns: repeat(2, 1fr);
