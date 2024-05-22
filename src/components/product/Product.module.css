@@ -60,6 +60,10 @@ margin: 100px auto 100px auto;
 justify-items: center;
 }
 .product_container section{margin: 0 auto;}
+ .productCard p, .productCard h3{
+        margin-left: 20px !important;
+
+    }
 
 .product_flexed{
     display: flex;
@@ -102,6 +106,7 @@ justify-items: center;
 .productCard{
         width: 100%;    
     }
+
     .productCard img{
     width: 100%;
     height: 200px;

@@ -30,7 +30,7 @@ function Results() {
               <hr />
               { isLoading ? (<div>Loader</div>) : (
                   
-        <div className={classes.product_container}>
+        <div  className={classes.product_container}>
           {results?.map((Product) => (
             <ProductCard key={Product.id} Product={Product}
             renderAddToCart={true}/>

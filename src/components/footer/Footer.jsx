@@ -6,6 +6,7 @@ import { GrLanguage } from "react-icons/gr";
 // import { IoMdArrowDropdown } from "react-icons/io";
 // import { IoMdArrowDropup } from "react-icons/io";
 import { CgArrowsV } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
 
 
@@ -13,54 +14,54 @@ function Footer() {
   return (
     <footer className={classes.footer_con}>
       <div className={classes.top}>
-        <a href="/">back to top</a>
+        <Link to="/">back to top</Link>
       </div>
       <div className={classes.footer_container}>
         <div className={classes.footer}>
           <h5>Get to Know Us</h5>
-          <a href="#">Careers</a>
-          <a href="#">Blog</a>
-          <a href="#">About Amazon</a>
-          <a href="#">Investor Relations</a>
-          <a href="#">Amazon Devices</a>
-          <a href="#">Amazon Science</a>
+          <Link to="#">Careers</Link>
+          <Link to="#">Blog</Link>
+          <Link to="#">About Amazon</Link>
+          <Link to="#">Investor Relations</Link>
+          <Link to="#">Amazon Devices</Link>
+          <Link to="#">Amazon Science</Link>
         </div>
         <div className={classes.footer}>
           <h5>Make Money with Us</h5>
-          <a href="#">Sell products on Amazon</a>
-          <a href="#">Sell on Amazon Business</a>
-          <a href="#">Sell apps on Amazon</a>
-          <a href="#">Become an Affiliate</a>
-          <a href="#">Advertise Your Products</a>
-          <a href="#">Self-Publish with Us</a>
-          <a href="#">Host an Amazon Hub</a>
-          <a href="#">› See More Make Money with Us</a>
+          <Link to="#">Sell products on Amazon</Link>
+          <Link to="#">Sell on Amazon Business</Link>
+          <Link to="#">Sell apps on Amazon</Link>
+          <Link to="#">Become an Affiliate</Link>
+          <Link to="#">Advertise Your Products</Link>
+          <Link to="#">Self-Publish with Us</Link>
+          <Link to="#">Host an Amazon Hub</Link>
+          <Link to="#">› See More Make Money with Us</Link>
         </div>
         <div className={classes.footer}>
           <h5>Amazon Payment Products</h5>
-          <a href="#">Amazon Business Card</a>
-          <a href="#">Shop with Points</a>
-          <a href="#">Reload Your Balance</a>
-          <a href="#">Amazon Currency Converter</a>
+          <Link to="#">Amazon Business Card</Link>
+          <Link to="#">Shop with Points</Link>
+          <Link to="#">Reload Your Balance</Link>
+          <Link to="#">Amazon Currency Converter</Link>
         </div>
         <div className={classes.footer}>
           <h5>Let Us Help You</h5>
-          <a href="#">COVID-19 and Amazon</a>
-          <a href="#">Your Account</a>
-          <a href="#">Your Orders</a>
-          <a href="#">Shipping Rates & Policies</a>
-          <a href="#">Returns & Replacements</a>
-          <a href="#">Manage Your Content and Devices</a>
-          <a href="#">Amazon Assistant</a>
-          <a href="#">Help</a>
+          <Link to="#">COVID-19 and Amazon</Link>
+          <Link to="#">Your Account</Link>
+          <Link to="#">Your Orders</Link>
+          <Link to="#">Shipping Rates & Policies</Link>
+          <Link to="#">Returns & Replacements</Link>
+          <Link to="#">Manage Your Content and Devices</Link>
+          <Link to="#">Amazon Assistant</Link>
+          <Link to="#">Help</Link>
         </div>
       </div>
       <hr />
       <div className={classes.lower_footer_container}>
         <div className={classes.img}>
-          <a href="/">
+          <Link  to="/">
             <img src={amazon} alt="" />
-          </a>
+          </Link>
         </div>
         <div className={classes.lower_footer}>
           <p
@@ -84,7 +85,12 @@ function Footer() {
           </p>
         </div>
         <div className={classes.flag + " " + classes.lower_footer}>
-          <p style={{ border: "1px solid rgb(203, 203, 215)", padding: "0 10px" }}>
+          <p
+            style={{
+              border: "1px solid rgb(203, 203, 215)",
+              padding: "0 10px",
+            }}
+          >
             <img src={flag} alt="" />
             United States
           </p>

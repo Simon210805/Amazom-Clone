@@ -2,9 +2,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 50px;
-    padding: 0 100px;
-margin: 100px auto 100px auto;
-min-width: 1400px;
+margin: auto;
+width: 30%;
 justify-items: center;
 }
 .product_container section{margin: 0 auto;}
